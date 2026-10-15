@@ -34,7 +34,7 @@ Code for the book Deep Learning with PyTorch, Second Edition (Huang, Stevens, An
 | `p2ch12_explore_data.ipynb`, `p2ch14_explore_data.ipynb` | Data exploration notebooks for the LUNA chapters (3.4 MB and 1.1 MB) |
 | `util/` | Shared helpers for part 2: `logconf.py`, `util.py` (`importstr`), `disk.py` (diskcache), `augmentation.py`, `unet.py` |
 | `data/` | Small book data by chapter (`p1ch2` 120M, `p1ch4` 55M, `part2/luna` CSVs, `part2/models` pretrained `.state` files) |
-| `ch2/`, `ch3/`, `ch4/` | Untracked. Leo's own chapter notebooks (pretrained networks, inpainting, tensors, image/CT/wine data) |
+| `ch2/`, `ch3/`, `ch4/` | Leo's own chapter notebooks (pretrained networks, inpainting, tensors, image/CT/wine data). `ch2/3_inpainting.ipynb` and `ch2/Untitled.ipynb` hold about 42 MB of embedded outputs each |
 | `pyproject.toml`, `poetry.lock`, `requirements.txt` | Upstream dependency specs (torch not included) |
 | `__init__.py` | Empty, makes the root importable |
 | `.venv/` | Gitignored. This repo's own env |
@@ -62,6 +62,6 @@ Code for the book Deep Learning with PyTorch, Second Edition (Huang, Stevens, An
 ## Conventions and gotchas
 - AGENTS.md: this venv is for this repo only. Every other workspace repo uses `/mnt/data0/shared/leot/.venv`.
 - The LUNA CT scans are not here. `p2ch12`/`p2ch13`/`p2ch14` `dsets.py` read `data-unversioned/part2/luna/subset*/*.mhd`, which does not exist. Only the annotation and candidate CSVs are in `data/part2/luna/`.
-- `ch3/tensor.ipynb` overwrites the tracked `data/p1ch3/ourpoints.t` (it shows as modified in `git status`).
+- `ch3/tensor.ipynb` overwrites the tracked `data/p1ch3/ourpoints.t`. The version it writes is the committed one since 2026-10-15.
 - `.gitignore` excludes `*.pt`, `*.pth`, `*.pt2`, `*.onnx`, `*.zip`, `*.json`, `notes.md`, `build/`, `libtorch/`, `.gradio`, `data-unversioned/`.
 - `p2ch16/3_torchrun.py` header says `2_torchrun.py` (stale name in the usage comment).
